@@ -1,12 +1,13 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 
 from rest_framework.routers import DefaultRouter
 
-from .views import CategoryViewSet, ArticleViewSet, LoginView
+from .views import CategoryViewSet, ArticleViewSet
 
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet)
 router.register(r'articles', ArticleViewSet)
 
-urlpatterns = router.urls
-urlpatterns.append(url(r'^auth/login$', LoginView.as_view()))
+urlpatterns = [
+    url(r'^', include(router.urls))
+]

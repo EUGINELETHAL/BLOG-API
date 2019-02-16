@@ -1,6 +1,5 @@
 # Create your models here.
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
@@ -13,8 +12,8 @@ class Category(models.Model):
 
     name = models.CharField(max_length=150)
 
-    def __unicode__(self):
-        return "Category: {}".format(self.name)
+    def __str__(self):
+        return self.name
 
 
 class Article(models.Model):
@@ -28,5 +27,5 @@ class Article(models.Model):
     category = models.ForeignKey(Category, related_name="articles")
     image = models.CharField(max_length=250)
 
-    def __unicode__(self):
-        return "Article: {}".format(self.title)
+    def __str__(self):
+        return self.content
