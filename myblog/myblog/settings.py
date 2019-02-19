@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import django_heroku
+
+
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,13 +24,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-#SECRET_KEY = '-euxwjpoc_pwl3xc&bm#hh^me84#yja=j)&a8x#i#*3)oso%$-'
-SECRET_KEY = os.environ['SECRET_KEY''-euxwjpoc_pwl3xc&bm#hh^me84#yja=j)&a8x#i#*3)oso%$-']
+SECRET_KEY = '-euxwjpoc_pwl3xc&bm#hh^me84#yja=j)&a8x#i#*3)oso%$-'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -90,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'myblog',
         'USER': 'lucy',
-        'PASSWORD': 'LUCY',
+        'PASSWORD': '',
         
     }
 }
@@ -136,4 +140,4 @@ STATIC_URL = '/static/'
 
 # Configure Django App for Heroku.
 
-django_heroku.settings(locals())
+

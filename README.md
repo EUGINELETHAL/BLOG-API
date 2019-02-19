@@ -1,11 +1,11 @@
 # BLOG-API
 
-This is an API that exposes articles and categories for a blog. It has the following functionality:
+This is aN API that made with Django Rest Framework that exposes articles and categories for a blog. It has the following functionality:
 
 1. Admin user - create using command line
-* log in
-* create, view, edit, delete article
-* create, view, edit, delete category
+* log in(Class-based API views)
+* create, view, edit, delete article(Viewset Classes)
+* create, view, edit, delete category(Viewset Classes)
 
 2. Category - name
 
