@@ -35,7 +35,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     Request methods (api/v1/categories): POST, GET
     Request methods (api/v1/categories/<id>): GET, PUT, DELETE
     """
-    # [WIP] Permissionst
+    # [WIP] Permissionsnt
     # permission_classes = (IsAuthenticatedOrReadOnly,)
     permission_classes = (IsAuthenticated,) 
 
