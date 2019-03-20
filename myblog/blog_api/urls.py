@@ -1,15 +1,17 @@
-from django.conf.urls import url, include
+from django.urls import re_path, include
 
 from rest_framework.routers import DefaultRouter
 
 from .views import CategoryViewSet, ArticleViewSet, LoginView
+
+app_name = "blog_api"
 
 router = DefaultRouter()
 router.register(r'categories', CategoryViewSet)
 router.register(r'articles', ArticleViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^auth/login$', LoginView.as_view())
+   re_path(r'^', include(router.urls)),
+   re_path (r'^auth/login$', LoginView.as_view())
 
 ]

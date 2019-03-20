@@ -20,11 +20,10 @@ class Article(models.Model):
     """
     Defines a blog article
     """
-
-    writer = models.ForeignKey(User, related_name="articles")
+    writer = models.ForeignKey(User, related_name="articles", on_delete=models.CASCADE )
     title = models.CharField(max_length=150)
     content = models.TextField()
-    category = models.ForeignKey(Category, related_name="articles")
+    category = models.ForeignKey(Category, related_name="articles", on_delete=models.CASCADE)
     image = models.CharField(max_length=250)
 
     def __str__(self):
